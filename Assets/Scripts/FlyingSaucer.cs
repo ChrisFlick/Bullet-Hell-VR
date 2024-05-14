@@ -10,9 +10,13 @@ public class FlyingSaucer : MonoBehaviour {
     [SerializeField] private float _rotateSpeed = 10;
 
     [Header("Movement")]
-    [SerializeField] private float _movementSpeed = 1f;
-    [SerializeField] private float _movementDistance = 50f;
-    [SerializeField] private float _movementCooldownTime = 10f;
+    [SerializeField] private float _movementSpeed = 20f;
+    [SerializeField] private float _movementDistance = 10f;
+    [SerializeField] private float _movementCooldownTime = 3f;
+
+    [Header("Shooting")]
+    [SerializeField] private Transform _bulletPrefab;
+    [SerializeField] private float _firingCooldownTime = 1f;
 
 
     private bool _isMovingUp;
@@ -23,6 +27,7 @@ public class FlyingSaucer : MonoBehaviour {
     private float _distanceMoved = 0;
 
     private float _timeSinceMovement = 0f;
+    private float _timeSinceFired = 0f;
 
     private void Start()
     {
@@ -46,6 +51,7 @@ public class FlyingSaucer : MonoBehaviour {
 
         HandleMovementCooldown();
         HandleMovement();
+        HandleFiring();
     }
 
     private void HandleMovementCooldown()
@@ -74,6 +80,17 @@ public class FlyingSaucer : MonoBehaviour {
         if (_distanceMoved < _movementDistance) return;
 
         _isMovementActive = false;
+    }
+
+    private void HandleFiring()
+    {
+        _timeSinceFired += Time.deltaTime;
+
+        if (_timeSinceFired < _firingCooldownTime) return;
+
+        _timeSinceFired = 0;
+
+        Instantiate(_bulletPrefab, transform.position, Quaternion.identity);
     }
 
     // Flying Saucers can move in 6 directions.

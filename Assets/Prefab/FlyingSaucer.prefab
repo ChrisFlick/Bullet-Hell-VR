@@ -119,6 +119,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _outerHoopTransform: {fileID: 4823212335060795571}
   _rotateSpeed: 90
+  _movementSpeed: 20
+  _movementDistance: 10
+  _movementCooldownTime: 3
+  _bulletPrefab: {fileID: 1617726914306494303, guid: 970502a47ec5f02418666dd28d1a161a, type: 3}
+  _firingCooldownTime: 1
 --- !u!4 &4823212335060795571 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6176740486769880380, guid: 6c40cfee8a13b9548b77a7fe5c6241cf, type: 3}
