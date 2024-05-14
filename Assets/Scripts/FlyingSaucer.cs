@@ -111,24 +111,24 @@ public class FlyingSaucer : MonoBehaviour {
         _isMovingUp = !_isMovingUp;
 
 
-        int upperLimit = lowerLimit + 3;
+        int upperLimit = lowerLimit + 2;
 
         int randomDirection = Random.Range(lowerLimit, upperLimit);
 
         switch (randomDirection)
         {
             case 0: // Down and to the left.
-                return new Vector3(0, -1, -1).normalized;
+                return new Vector3(0, -1, -1);
             case 1: // Straight down.
-                return new Vector3(0, 0, -1).normalized;
+                return new Vector3(0, 0, -1);
             case 2: // Down and to the right.
-                return new Vector3(0, 1, -1).normalized;
+                return new Vector3(0, 1, -1);
             case 3: // Up and to the left.
-                return new Vector3(0, -1, 1).normalized;
+                return new Vector3(0, -1, 1);
             case 4: // Straight up.
-                return new Vector3(0, 0, 1).normalized;
+                return new Vector3(0, 0, 1);
             case 5: // Up and to the right.
-                return new Vector3(0, 1, 1).normalized;
+                return new Vector3(0, 1, 1);
             default:
                 Debug.Log("Flying Saucer randomDirection was out of range");
 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5030476879992659500}
   - component: {fileID: 4010992274643070598}
   - component: {fileID: 3820192524040540957}
+  - component: {fileID: 2004613363823696163}
   m_Layer: 6
   m_Name: Bullet
   m_TagString: Ball
@@ -286,3 +287,17 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &2004613363823696163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489792506833608580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63bae56c0a4a1dd4e8b5fd00cb6e5253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletSpeed: 0.25
+  _killDistance: 20
