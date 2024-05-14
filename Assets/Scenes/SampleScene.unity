@@ -291,6 +291,18 @@ PrefabInstance:
       propertyPath: _rotateSpeed
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 256973864062455312, guid: 2df4ef473498cfb42b5f70c3e2dc34fe, type: 3}
+      propertyPath: _movementSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 256973864062455312, guid: 2df4ef473498cfb42b5f70c3e2dc34fe, type: 3}
+      propertyPath: _movementDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 256973864062455312, guid: 2df4ef473498cfb42b5f70c3e2dc34fe, type: 3}
+      propertyPath: _movementCooldownTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1215399956758170212, guid: 2df4ef473498cfb42b5f70c3e2dc34fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
