@@ -120,8 +120,8 @@ MonoBehaviour:
   _outerHoopTransform: {fileID: 4823212335060795571}
   _rotateSpeed: 90
   _movementSpeed: 20
-  _movementDistance: 10
-  _movementCooldownTime: 3
+  _movementDistance: 3
+  _movementCooldownTime: 2
   _bulletPrefab: {fileID: 1617726914306494303, guid: 970502a47ec5f02418666dd28d1a161a, type: 3}
   _firingCooldownTime: 1
 --- !u!4 &4823212335060795571 stripped

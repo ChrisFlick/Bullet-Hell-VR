@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 365500634}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000091366186, y: 0.99933225, z: -0.02641351, w: 0.025248358}
-  m_LocalPosition: {x: -0.9664091, y: 4.22956, z: -23.897112}
+  m_LocalPosition: {x: -0.95, y: 5.15, z: -23.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -280,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 1262581987}
   serializedVersion: 2
   m_LocalRotation: {x: 0.004490445, y: 0.9751927, z: -0.02236882, w: 0.22017847}
-  m_LocalPosition: {x: -2.260044, y: 4.087084, z: -24.078876}
+  m_LocalPosition: {x: -2.243635, y: 5.007524, z: -24.121765}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -452,7 +452,7 @@ Transform:
   m_GameObject: {fileID: 1376748804}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00055884774, y: 0.9999707, z: -0.0024165937, w: 0.0072465977}
-  m_LocalPosition: {x: 0.6473067, y: 5.0552874, z: -23.830162}
+  m_LocalPosition: {x: 0.6637158, y: 5.9757276, z: -23.87305}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -597,7 +597,7 @@ Transform:
   m_GameObject: {fileID: 1644005582}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0027867318, y: 0.9973759, z: -0.06350943, w: -0.03464206}
-  m_LocalPosition: {x: 1.4075317, y: 5.129016, z: -24.252506}
+  m_LocalPosition: {x: 1.4239409, y: 6.049456, z: -24.295395}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -690,6 +690,22 @@ PrefabInstance:
       propertyPath: m_ModelPrefab
       value: 
       objectReference: {fileID: 3837845683226746822, guid: 5a89c10d71656664da3548b5bd8585c6, type: 3}
+    - target: {fileID: 4565036662414864469, guid: d760261927fe9d545b6e862d256327de, type: 3}
+      propertyPath: m_Radius
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694454206959347257, guid: d760261927fe9d545b6e862d256327de, type: 3}
+      propertyPath: m_Radius
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694454206959347257, guid: d760261927fe9d545b6e862d256327de, type: 3}
+      propertyPath: m_Center.x
+      value: 0.02000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5694454206959347257, guid: d760261927fe9d545b6e862d256327de, type: 3}
+      propertyPath: m_Center.z
+      value: -0.02844536
+      objectReference: {fileID: 0}
     - target: {fileID: 6000393023799375928, guid: d760261927fe9d545b6e862d256327de, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
@@ -780,7 +796,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 3.1e-44, y: 7.5656183e+28, z: 1.09002504e+27, w: 7.7471845e+31}
+  m_BoundingSphereOverride: {x: 0, y: 1.517288e-28, z: 8.79e-43, w: 2.0991613e-26}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
