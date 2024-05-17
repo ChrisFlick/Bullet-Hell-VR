@@ -18,11 +18,17 @@ public class MainMenu : MonoBehaviour
 
         int _highscore = PlayerPrefs.GetInt("highScore");
 
+        if (score > _highScore)
+        {
+            _highScore = score;
+        }
+
         if (_highscore == 0 )
         {
-            _highscore = 1000;
-            _highScoreText.text = $"High Score: {_highScore}";
+            _highscore = 1000; 
         }
+
+        _highScoreText.text = $"High Score: {_highScore}";
     }
 
     private void OnDisable()
