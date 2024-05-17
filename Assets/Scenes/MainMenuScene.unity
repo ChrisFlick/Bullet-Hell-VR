@@ -659,10 +659,54 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8301667711331690528, guid: 3bfe44af7d50d6b40ad57fc0ce349be1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1175297483}
     - targetCorrespondingSourceObject: {fileID: 8331587369617218837, guid: 3bfe44af7d50d6b40ad57fc0ce349be1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 851007986}
   m_SourcePrefab: {fileID: 100100000, guid: 3bfe44af7d50d6b40ad57fc0ce349be1, type: 3}
+--- !u!114 &1175297480 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2742750368150340478, guid: 3bfe44af7d50d6b40ad57fc0ce349be1, type: 3}
+  m_PrefabInstance: {fileID: 1175297479}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1175297481 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1076059541613959635, guid: 3bfe44af7d50d6b40ad57fc0ce349be1, type: 3}
+  m_PrefabInstance: {fileID: 1175297479}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1175297482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8301667711331690528, guid: 3bfe44af7d50d6b40ad57fc0ce349be1, type: 3}
+  m_PrefabInstance: {fileID: 1175297479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1175297483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175297482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c807833edf7d84ebd5c86414df3228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreText: {fileID: 1175297480}
+  _highScoreText: {fileID: 1175297481}
 --- !u!1 &1216208206
 GameObject:
   m_ObjectHideFlags: 0

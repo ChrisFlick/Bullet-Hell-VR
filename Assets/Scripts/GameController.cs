@@ -15,8 +15,8 @@ public class GameController : MonoBehaviour
     private float _timeSinceLastSpawn = 0;
     private float _gameTime = 0;
 
-    private int score = 0;
-
+    private int _score = 0;
+    private int _highScore;
 
     private void Start()
     {
@@ -47,18 +47,33 @@ public class GameController : MonoBehaviour
         Instantiate(_flyingSaucerPrefab, _spawnPoints[spawnPointIndex]);
     }
 
+    private void OnEnable()
+    {
+        _highScore = PlayerPrefs.GetInt("highScore");
+    }
+
+    void OnDisable()
+    {
+        PlayerPrefs.SetInt("score", _score);
+        
+        if (_score > _highScore)
+        {
+            PlayerPrefs.SetInt("highScore", _score);
+        }
+    }
+
     private void FlyingSaucer_OnAnyHit(object sender, EventArgs e)
     {
 
-        score += 1000;
+        _score += 1000;
 
-        Debug.Log($"Score is now {score}");
+        Debug.Log($"Score is now {_score}");
     }
 
     private void BulletKillTrigger_OnAnyDodged(object sender, EventArgs e)
     {
 
         // Add to score based on how many bullets are dodged.
-        score += 1;
+        _score += 1;
     }
 }
