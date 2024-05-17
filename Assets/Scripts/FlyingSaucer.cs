@@ -20,7 +20,11 @@ public class FlyingSaucer : MonoBehaviour {
     [Header("Shooting")]
     [SerializeField] private Transform _bulletPrefab;
     [SerializeField] private float _firingCooldownTime = 1f;
+    
+
+    [Header("Sound")]
     [SerializeField] private AudioSource _blasterSFX;
+    [SerializeField] private AudioSource _explosionSFX;
 
     [Header("Juice")]
     [SerializeField] private Transform _explosionVFXPrefab;
@@ -77,6 +81,9 @@ public class FlyingSaucer : MonoBehaviour {
 
         Transform explosionVFX = Instantiate(_explosionVFXPrefab, this.transform);
         explosionVFX.parent = null;
+
+        _explosionSFX.Play();
+        _explosionSFX.transform.parent = null;
 
         OnAnyHit?.Invoke(this, EventArgs.Empty);
 
