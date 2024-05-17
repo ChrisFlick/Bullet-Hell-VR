@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Anchor
-  - Ball
+  - Bullet
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Bullets
-  - 
+  - Flying Saucers
   - 
   - 
   - 

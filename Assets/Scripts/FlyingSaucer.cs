@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class FlyingSaucer : MonoBehaviour {
+
+    public static event EventHandler OnAnyHit;
 
     [Header("Hoop Rotation")]
     [SerializeField] private Transform _outerHoopTransform;
@@ -17,6 +20,9 @@ public class FlyingSaucer : MonoBehaviour {
     [Header("Shooting")]
     [SerializeField] private Transform _bulletPrefab;
     [SerializeField] private float _firingCooldownTime = 1f;
+
+    [Header("Juice")]
+    [SerializeField] private Transform _explosionVFXPrefab;
 
 
     private bool _isMovingUp;
@@ -32,7 +38,7 @@ public class FlyingSaucer : MonoBehaviour {
     private void Start()
     {
         // Randomly pick either 0 or 1 then set the initial direction for the Flying Saucer to move.
-        int randomNumber = Random.Range(0, 2);
+        int randomNumber = UnityEngine.Random.Range(0, 2);
         
 
         if (randomNumber == 0)
@@ -52,6 +58,29 @@ public class FlyingSaucer : MonoBehaviour {
         HandleMovementCooldown();
         HandleMovement();
         HandleFiring();
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check to see if a bullet collides with this object then destroy it.
+        if (other.gameObject.tag != "Bullet") return;
+
+
+        Bullet bullet = other.gameObject.GetComponent<Bullet>();
+
+        if (bullet == null) return;
+        if (!bullet.IsCaught()) return;
+
+        Debug.Log($"{this} Hit by bullet");
+
+        Transform explosionVFX = Instantiate(_explosionVFXPrefab, this.transform);
+        explosionVFX.parent = null;
+
+        OnAnyHit?.Invoke(this, EventArgs.Empty);
+
+        GameObject.Destroy(bullet.gameObject);
+        GameObject.Destroy(gameObject);
     }
 
     private void HandleMovementCooldown()
@@ -113,7 +142,7 @@ public class FlyingSaucer : MonoBehaviour {
 
         int upperLimit = lowerLimit + 2;
 
-        int randomDirection = Random.Range(lowerLimit, upperLimit);
+        int randomDirection = UnityEngine.Random.Range(lowerLimit, upperLimit);
 
         switch (randomDirection)
         {

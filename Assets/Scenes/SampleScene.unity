@@ -692,11 +692,11 @@ PrefabInstance:
       objectReference: {fileID: 3837845683226746822, guid: 5a89c10d71656664da3548b5bd8585c6, type: 3}
     - target: {fileID: 4565036662414864469, guid: d760261927fe9d545b6e862d256327de, type: 3}
       propertyPath: m_Radius
-      value: 0.15
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5694454206959347257, guid: d760261927fe9d545b6e862d256327de, type: 3}
       propertyPath: m_Radius
-      value: 0.15
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5694454206959347257, guid: d760261927fe9d545b6e862d256327de, type: 3}
       propertyPath: m_Center.x
@@ -796,7 +796,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.517288e-28, z: 8.79e-43, w: 2.0991613e-26}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 6e-44, w: 3.1e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

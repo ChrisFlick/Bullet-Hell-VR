@@ -10,11 +10,14 @@ public class Bullet : MonoBehaviour
 
     [SerializeField] private Material _caughtMaterial;
 
+    [Header("For Testing")]
+    [SerializeField] private bool _isCaught = false;
+
     private Vector3 _direction;
 
     private Vector3 _destroyLocation;
 
-    bool _isCaught = false;
+    
 
     private void Start()
     {   
@@ -49,5 +52,10 @@ public class Bullet : MonoBehaviour
         var materialsCopy = renderer.materials;
         materialsCopy[0] = _caughtMaterial;
         GetComponent<Renderer>().materials = materialsCopy;
+    }
+
+    public bool IsCaught()
+    {
+        return _isCaught;
     }
 }
