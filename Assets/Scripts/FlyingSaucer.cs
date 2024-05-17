@@ -20,6 +20,7 @@ public class FlyingSaucer : MonoBehaviour {
     [Header("Shooting")]
     [SerializeField] private Transform _bulletPrefab;
     [SerializeField] private float _firingCooldownTime = 1f;
+    [SerializeField] private AudioSource _blasterSFX;
 
     [Header("Juice")]
     [SerializeField] private Transform _explosionVFXPrefab;
@@ -120,6 +121,8 @@ public class FlyingSaucer : MonoBehaviour {
         _timeSinceFired = 0;
 
         Instantiate(_bulletPrefab, transform.position, Quaternion.identity);
+
+        _blasterSFX.Play();
     }
 
     // Flying Saucers can move in 6 directions.
