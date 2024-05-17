@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         FlyingSaucer.OnAnyHit += FlyingSaucer_OnAnyHit;
+        BulletKillTrigger.OnAnyDodged += BulletKillTrigger_OnAnyDodged;
     }
 
     private void Update()
@@ -36,5 +37,11 @@ public class GameController : MonoBehaviour
         score += 1000;
 
         Debug.Log($"Score is now {score}");
+    }
+
+    private void BulletKillTrigger_OnAnyDodged(object sender, EventArgs e)
+    {
+        // Add to score based on how many bullets are dodged.
+        score += 1;
     }
 }
