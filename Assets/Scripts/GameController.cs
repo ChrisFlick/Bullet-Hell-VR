@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
 
     private int score = 0;
 
+    private bool _isActive;
+
     private void Start()
     {
         FlyingSaucer.OnAnyHit += FlyingSaucer_OnAnyHit;
@@ -21,6 +23,8 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        if (!_isActive) return;
+
         _timeSinceLastSpawn += Time.deltaTime;
 
         if (_timeSinceLastSpawn < _spawnTime) return;
@@ -34,6 +38,8 @@ public class GameController : MonoBehaviour
 
     private void FlyingSaucer_OnAnyHit(object sender, EventArgs e)
     {
+        if (!_isActive) return;
+
         score += 1000;
 
         Debug.Log($"Score is now {score}");
@@ -41,6 +47,8 @@ public class GameController : MonoBehaviour
 
     private void BulletKillTrigger_OnAnyDodged(object sender, EventArgs e)
     {
+        if (!_isActive) return;
+
         // Add to score based on how many bullets are dodged.
         score += 1;
     }
