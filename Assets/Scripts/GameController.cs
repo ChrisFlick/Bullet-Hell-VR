@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
 
         if (_gameTime > GAME_LENGTH)
         {
-            int mainMenuIndex = 0;
+            int mainMenuIndex = 1;
             SceneManager.LoadScene(mainMenuIndex, LoadSceneMode.Single);
         }
 

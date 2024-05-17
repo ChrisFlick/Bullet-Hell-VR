@@ -14,7 +14,7 @@ public class StartGameButton : MonoBehaviour
 
     void TaskOnClick()
     {
-        int gameSceneIndex = 1;
+        int gameSceneIndex = 2;
         SceneManager.LoadScene(gameSceneIndex, LoadSceneMode.Single);
     }
 }
